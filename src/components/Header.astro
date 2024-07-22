@@ -3,7 +3,7 @@ import TopLogo from "../components/TopLogo.astro";
 ---
 <nav>
   <div id="top-logo-container" style="cursor: pointer;">
-    <TopLogo class='logo-small'/>
+    <TopLogo class='logo-small animate'/>
   </div>
   <div class="right">
     <div class="join-us">
@@ -109,14 +109,3 @@ import TopLogo from "../components/TopLogo.astro";
     display: inline-flex;
   }
 </style>
-<script>
-  const topLogoContainer = document.querySelector("#top-logo-container")
-  const topLogo = document.querySelector("#top-logo-container>div")
-  const animateClass = "animate"
-  topLogoContainer?.addEventListener("mouseenter",()=>{
-    topLogo?.classList.add(animateClass)
-  })
-  topLogoContainer?.addEventListener("mouseleave",()=>{
-    topLogo?.classList.remove(animateClass)
-  })
-</script>

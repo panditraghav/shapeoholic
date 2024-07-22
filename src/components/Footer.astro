@@ -1,0 +1,68 @@
+---
+import BottomLogo from "../components/BottomLogo.astro";
+---
+<footer>
+  <div class="b-logo-line-container">
+    <div class="line-1"/>
+    <div class="logo-container">
+      <div class="logo-wrapper">
+        <BottomLogo style="scale: 0.5"/>
+      </div>
+    </div>
+    <div class="line-2"/>
+  </div>
+</footer>
+<style>
+  .b-logo-line-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo-container{
+    width: 120px;
+    height: 120px;
+    position: relative;
+  }
+  .logo-wrapper{
+    margin-left: -35px;
+    margin-top: -50px;
+    animation-name: logo-wrapper-down;
+    animation-delay: 1800ms;
+    animation-duration: 10.7s;
+    animation-timing-function: cubic-bezier(0.47, 0, 0.23, 1.38);
+    animation-iteration-count: infinite;
+  }
+  .line-1, .line-2{
+    height: 2px;
+    flex: 1 0 0;
+  }
+  .line-1{
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(178, 93, 255, 0.43) 0%, rgba(178, 93, 255, 0.00) 100%);
+    transform: rotateZ(180deg);
+  }
+  .line-2{
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(178, 93, 255, 0.43) 0%, rgba(178, 93, 255, 0.00) 100%);
+  }
+  @keyframes logo-wrapper-down{
+    16%{
+      padding-top: 0px;
+      padding-left: 0px;
+    }
+    26%{
+      padding-top: 42px;
+      padding-left: 35px;
+    }
+    92.4%{
+      padding-top: 42px;
+      padding-left: 35px;
+    }
+    100%{
+      padding-top: 0px;
+      padding-left: 0px;
+    }
+  }
+</style>
